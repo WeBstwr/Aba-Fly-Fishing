@@ -33,3 +33,30 @@
   padding: 1rem 4rem;
   letter-spacing: 4px;
 }
+
+.about-banner {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  font-size: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about-img img {
+  min-width: 50%;
+}
+
+.about-textbox {
+  font-size: 2rem;
+  padding: 2rem;
+  letter-spacing: 3px;
+  text-align: center;
+}
