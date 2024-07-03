@@ -1,0 +1,77 @@
+.contact-bg {
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../assets/contactBg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.contact-bg h2 {
+  font-size: 6rem;
+  color: var(--fourth-color);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
+
+.contact-container {
+  display: flex;
+}
+
+.contact-form {
+  min-width: 60rem;
+}
+
+.why-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.why-us h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.why-us p {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.map-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.open-hours {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.open-hours h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  padding: 2rem 0;
+  letter-spacing: 3px;
+}
+
+.open-hours p {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: 3px;
+}
