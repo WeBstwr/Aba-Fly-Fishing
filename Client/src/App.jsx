@@ -5,7 +5,7 @@ import Flies from "./pages/Flies/Flies";
 import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/Cart/Cart";
 import Profile from "./pages/Profile/Profile";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -21,7 +21,7 @@ function App() {
           <Route path="Cart/" element={<Cart />} />
           <Route path="Profile/" element={<Profile />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );

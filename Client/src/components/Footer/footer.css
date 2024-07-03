@@ -1,0 +1,31 @@
+.footer {
+  margin-top: 10rem;
+  background-color: var(--first-color);
+}
+
+.footer-text {
+  color: var(--fourth-color);
+  padding: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 3rem;
+  font-size: 4rem;
+}
+
+.socials-icon-wrapper {
+  width: 100%;
+}
+
+.footer-social svg {
+  width: 10rem;
+  fill: var(--fifth-color);
+  cursor: pointer;
+}
