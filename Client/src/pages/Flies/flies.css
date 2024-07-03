@@ -4,19 +4,139 @@
   border: 3px solid purple;
   min-height: 100vh;
   display: flex;
-  z-index: -1;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* z-index: -1; */
+}
+
+@media screen and(max-width: 53.125em) {
+  .flies {
+    flex-direction: column;
+  }
 }
 
 .flies-category {
-  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--fourth-color);
   width: 27rem;
-  height: 59rem;
-  margin-left: 8rem;
+  height: 45rem;
+  margin-left: 6rem;
   position: fixed;
   top: 12rem;
   left: 0;
+  border: 2px solid red;
 }
 
-.right {
-    margin-left: 40rem;
+@media screen and(max-width: 53.125em) {
+  .flies-category {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    top: auto;
+    left: auto;
+  }
+  .flies-container {
+    margin-top: 45rem;
+  }
+}
+
+.flies-category h3 {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+  font-weight: 350;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  padding: 0.3rem 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.flies-names {
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 3px;
+}
+
+.flies-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-left: 38rem;
+  border: 3px solid green;
+  width: 100%;
+}
+
+@media screen and(max-width: 53.125em) {
+  .flies-container {
+    margin-left: 0;
+    margin-top: 45rem;
+  }
+}
+.main-fly-container {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fly {
+  background-color: var(--fourth-color);
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  transition: all 1s ease;
+  position: relative;
+}
+
+.fly button {
+  background-color: var(--first-color);
+  margin-bottom: 4rem;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 13rem;
+  z-index: 1;
+}
+
+.fly:hover button {
+  display: block;
+}
+
+.fly-img img {
+  width: 100%;
+  height: 23vh;
+}
+
+.fly-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fly-text-box h3 {
+  font-size: 2rem;
+}
+
+.fly-attribute p {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.main-fly-container button {
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }

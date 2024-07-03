@@ -1,10 +1,11 @@
+import Nymph0 from "../../assets/nymph0.png";
 import "./flies.css";
 const Flies = () => {
   return (
     <>
       <section className="flies">
         <div className="flies-category">
-          <h3>Flies</h3>
+          <h3>Category</h3>
           <div className="flies-names">
             <p>Nymphs</p>
             <p>Bass Flies</p>
@@ -16,8 +17,150 @@ const Flies = () => {
             <p>Trout Streamers</p>
           </div>
         </div>
-        <div className="right">
-          <h1>Hello world</h1>
+        <div className="flies-container">
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
+
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
+
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
+
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
+
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
+
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
+
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
+
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
+
+          <div className="main-fly-container">
+            <div className="fly">
+              <div className="fly-img">
+                <img src={Nymph0} alt="nymp" />
+              </div>
+              <div className="fly-text-box">
+                <h3>NYMPH</h3>
+                <div className="fly-attribute">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <button>add to cart</button>
+            </div>
+            <button>$ 2.99</button>
+          </div>
         </div>
       </section>
     </>
