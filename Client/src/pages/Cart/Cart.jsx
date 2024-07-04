@@ -1,7 +1,13 @@
 import "./cart.css";
 import Banner from "../../components/Banner/Banner";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate();
+
+  function handleclick() {
+    navigate("/Flies");
+  }
   return (
     <>
       <section className="cart">
@@ -23,7 +29,7 @@ const Cart = () => {
           </div> */}
         </div>
         <div className="item-price">
-          <button>continue shopping</button>
+          <button onClick={(event) => handleclick()}>continue shopping</button>
         </div>
       </section>
     </>

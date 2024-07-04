@@ -20,12 +20,89 @@
   text-transform: capitalize;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-container {
   display: flex;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 53.75em) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+  }
 }
 
 .contact-form {
-  min-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 45%;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.contact-form input {
+  background-color: var(--fifth-color);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 0.5rem 3rem;
+}
+
+.errors {
+  color: red;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message textarea {
+  background-color: var(--fifth-color);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 0.5rem 3rem;
+  text-align: center;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.contact-form button {
+  background-color: var(--fifth-color);
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 0.5rem 3rem;
+  cursor: pointer;
 }
 
 .why-us {
@@ -50,7 +127,40 @@
 .map-section {
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 53.75em) {
+  .map-section {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 4rem;
+  }
+}
+
+.map {
+  width: 50rem;
+  border: 3px solid;
+}
+
+@media screen and (max-width: 31.25em) {
+  .map {
+    width: 34rem;
+  }
+}
+
+.map iframe {
+  width: 100%;
+}
+
+@media screen and (max-width: 31.25em) {
+  .map iframe {
+    min-width: 100%;
+  }
 }
 
 .open-hours {
@@ -59,6 +169,12 @@
   width: 40%;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 37.5em) {
+  .open-hours {
+    min-width: 100%;
+  }
 }
 
 .open-hours h3 {

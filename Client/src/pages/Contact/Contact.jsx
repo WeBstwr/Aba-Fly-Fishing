@@ -1,6 +1,30 @@
 import "./contact.css";
+import React from "react";
+import { useFormik } from "formik";
 
 const Contact = () => {
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    onSubmit: (values) => {
+      console.log(values);
+    },
+
+    validate: (formValues) => {
+      let errors = {};
+      if (formValues.name === "") {
+        errors.name = "Name is required";
+      }
+      if (formValues.email === "") {
+        errors.email = "Email is required";
+      }
+
+      return errors;
+    },
+  });
   return (
     <>
       <section className="contact">
@@ -9,7 +33,49 @@ const Contact = () => {
         </div>
         <div className="contact-container">
           <div className="contact-form">
-            <h3>a form</h3>
+            <form onSubmit={formik.handleSubmit}>
+              <div className="form-name">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.name && formik.errors.name && (
+                  <p>{formik.errors.name}</p>
+                )}
+              </div>
+              <div className="form-email">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.email && formik.errors.email && (
+                  <p>{formik.errors.email}</p>
+                )}
+              </div>
+              <div className="message">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={3}
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
+                ></textarea>
+              </div>
+              <div className="form-button">
+                <button type="submit">Send</button>
+              </div>
+            </form>
           </div>
           <div className="why-us">
             <h3>why us</h3>
