@@ -21,6 +21,9 @@ const HeaderBottom = () => {
           <li className="header-nav-item">
             <Link to="/Profile">profile</Link>
           </li>
+          <li className="header-nav-item">
+            <Link to="/signUp">SignUp</Link>
+          </li>
         </ol>
       </nav>
     </div>

@@ -69,10 +69,6 @@
   padding: 0.5rem 3rem;
 }
 
-.errors {
-  color: red;
-}
-
 .message {
   display: flex;
   flex-direction: column;
