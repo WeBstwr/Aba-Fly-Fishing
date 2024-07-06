@@ -1,8 +1,15 @@
 import "./signUp.css";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
+  function handleclick() {
+    navigate("/SignIn");
+  }
+
   const formik = useFormik({
     initialValues: {
       userName: "",
@@ -135,13 +142,15 @@ const SignUp = () => {
                 />
               </div>
               <div className="sign-up-submit">
-                <button type="submit">register</button>
+                <button type="submit" onClick={(event) => handleclick()}>
+                  register
+                </button>
               </div>
             </form>
           </div>
           <div className="sign-up-form-title">
             <h1>
-              or <button>log in</button>
+              or <button onClick={(event) => handleclick()}>log in</button>
             </h1>
           </div>
         </div>
