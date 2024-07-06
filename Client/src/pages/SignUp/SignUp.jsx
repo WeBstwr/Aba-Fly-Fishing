@@ -1,14 +1,36 @@
 import "./signUp.css";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 
 const SignUp = () => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
-  function handleclick() {
-    navigate("/SignIn");
-  }
+  const handleclick = async (formValues) => {
+    try {
+      setLoading(true);
+      setError(false);
+      const response = await fetch("http://localhost:8080/api/users/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      });
+      const data = await response.json();
+      if (data.success === true) {
+        navigate("/SignIn");
+      } else {
+        setError(data.message);
+      }
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -19,6 +41,7 @@ const SignUp = () => {
       password: "",
     },
     onSubmit: (values) => {
+      handleclick(values);
       console.log(values);
     },
 
@@ -142,15 +165,16 @@ const SignUp = () => {
                 />
               </div>
               <div className="sign-up-submit">
-                <button type="submit" onClick={(event) => handleclick()}>
-                  register
+                <button type="submit" disabled={loading}>
+                  {loading ? "please wait..." : "register"}
                 </button>
+                <p className="error">{error && error}</p>
               </div>
             </form>
           </div>
           <div className="sign-up-form-title">
             <h1>
-              or <button onClick={(event) => handleclick()}>log in</button>
+              or <button onClick={handleclick}>log in</button>
             </h1>
           </div>
         </div>
