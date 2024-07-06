@@ -1,5 +1,6 @@
 import "./assets/globals.css";
 import Header from "./components/Header/Header";
+// import Protected from "./components/Protected/Protected.jsx";
 import Home from "./pages/Home/Home";
 import Flies from "./pages/Flies/Flies";
 import Contact from "./pages/Contact/Contact.jsx";
@@ -18,7 +19,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route exact path="/Flies" element={<Flies />} />
+          <Route path="/Flies" element={<Flies />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Profile" element={<Profile />} />
