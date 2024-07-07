@@ -2,8 +2,10 @@ import "./signUp.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
+import { apiBase } from "../../utils/config.js";
 
 const SignUp = () => {
+  console.log(apiBase);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ const SignUp = () => {
     try {
       setLoading(true);
       setError(false);
-      const response = await fetch("http://localhost:8080/api/users/register", {
+      const response = await fetch(`${apiBase}/api/users/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
