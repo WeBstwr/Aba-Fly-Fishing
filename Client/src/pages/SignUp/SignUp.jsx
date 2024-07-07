@@ -10,6 +10,10 @@ const SignUp = () => {
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 
+  const handleLoginClick = () => {
+    navigate("/SignIn");
+  };
+
   const handleclick = async (formValues) => {
     try {
       setLoading(true);
@@ -170,15 +174,15 @@ const SignUp = () => {
                 <button type="submit" disabled={loading}>
                   {loading ? "please wait..." : "register"}
                 </button>
-                <p className="error">{error && error}</p>
               </div>
             </form>
           </div>
           <div className="sign-up-form-title">
             <h1>
-              or <button onClick={handleclick}>log in</button>
+              or <button onClick={handleLoginClick}>log in</button>
             </h1>
           </div>
+          <p className="error">{error && error}</p>
         </div>
       </div>
     </>

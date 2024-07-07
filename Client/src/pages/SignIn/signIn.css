@@ -6,6 +6,33 @@
   align-items: center;
 }
 
+@media screen and (max-width: 40em) {
+  .log-in-logo img {
+    margin-top: 10rem;
+    border: 2px solid;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .log-in-section {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .log-in-form-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px green solid;
+  }
+}
+
 .log-in-form-name {
   display: flex;
   gap: 5rem;
@@ -77,4 +104,15 @@
   font-weight: bold;
   text-transform: capitalize;
   cursor: pointer;
+}
+
+@media screen and (max-width: 40em) {
+  .log-in-submit {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    border: red solid 3px;
+  }
 }

@@ -1,14 +1,49 @@
 import "./signIn.css";
 import logo from "../../assets/logo.png";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { useFormik } from "formik";
+import { apiBase } from "../../utils/config.js";
 
 const SignIn = () => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
-  function handleclick() {
-    navigate("/");
-  }
+  // const changeUserInfo = useUserStore((state) => state.changeUserInfo)
+
+  const handleClick = async (formValues) => {
+    // changeUserInfo({ userName: "wabee"})
+    // navigate("/");
+    try {
+      setLoading(true);
+      setError(false);
+      const response = await fetch(`${apiBase}/api/users/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+        credentials: "include",
+      });
+      const data = await response.json();
+      console.log(data);
+      if (data.success === true) {
+        // recordUserInfo(data.data)
+        navigate("/Profile");
+      }
+      // if (data.success === true) {
+      //   changeUserInfo(data.data);
+      // }
+      else {
+        setError(data.message);
+      }
+    } catch {
+      setError(e.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -16,7 +51,7 @@ const SignIn = () => {
       password: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      handleClick(values);
     },
 
     validate: (formValues) => {
@@ -31,7 +66,7 @@ const SignIn = () => {
       ) {
         errors.userNameOrEmail = "Invalid User name or Email";
       }
-      if (formValues.email === "") {
+      if (formValues.userNameOrEmail === "") {
         errors.email = "Email is required";
       }
       if (formValues.password === "") {
@@ -88,10 +123,11 @@ const SignIn = () => {
               />
             </div>
             <div className="log-in-submit">
-              <button type="submit" onClick={(event) => handleclick()}>
-                log in
+              <button type="submit" disabled={loading}>
+                {loading ? "please wait..." : "log in"}
               </button>
             </div>
+            <p className="error">{error && error}</p>
           </form>
         </div>
       </div>
