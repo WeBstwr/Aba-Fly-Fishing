@@ -1,0 +1,18 @@
+.profile {
+  margin-top: 10rem;
+}
+
+.profile-banner {
+  background-color: var(--third-color);
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-banner h2 {
+  color: var(--first-color);
+  font-size: 4rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}

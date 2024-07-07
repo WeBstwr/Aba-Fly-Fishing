@@ -9,7 +9,6 @@
 @media screen and (max-width: 40em) {
   .log-in-logo img {
     margin-top: 10rem;
-    border: 2px solid;
     width: 100%;
   }
 }
@@ -29,7 +28,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px green solid;
   }
 }
 
@@ -112,7 +110,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-items: center;
-    border: red solid 3px;
   }
 }
