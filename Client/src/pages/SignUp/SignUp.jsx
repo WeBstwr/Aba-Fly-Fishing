@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import { apiBase } from "../../utils/config.js";
 
 const SignUp = () => {
-  console.log(apiBase);
+  // console.log(apiBase);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const navigate = useNavigate();

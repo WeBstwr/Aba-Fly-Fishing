@@ -1,12 +1,11 @@
 .flies {
   margin-top: 12rem;
   position: relative;
-  border: 3px solid purple;
+  /* border: 3px solid purple; */
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* z-index: -1; */
 }
 
 @media screen and(max-width: 53.125em) {
@@ -28,7 +27,7 @@
   position: fixed;
   top: 12rem;
   left: 0;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 @media screen and(max-width: 53.125em) {
@@ -68,7 +67,7 @@
   gap: 2rem;
   justify-content: center;
   margin-left: 38rem;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   width: 100%;
 }
 

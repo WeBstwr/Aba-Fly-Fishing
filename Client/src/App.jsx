@@ -9,6 +9,7 @@ import Profile from "./pages/Profile/Profile";
 import Footer from "./components/Footer/Footer";
 import SignIn from "./pages/SignIn/SignIn.jsx";
 import SignUp from "./pages/SignUp/SignUp.jsx";
+import Purchase from "./pages/Purchase/Purchase.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Flies" element={<Flies />} />
+          <Route path="/Purchase" element={<Purchase />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Profile" element={<Profile />} />

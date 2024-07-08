@@ -1,6 +1,7 @@
 import express from "express";
 import usersRouter from "./routes/users.routes.js";
 import { config } from "dotenv";
+import cookieParser from "cookie-parser";
 import cors from "cors";
 config();
 
@@ -14,6 +15,7 @@ app.use(
 );
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser());
 
 app.use("/api/users", usersRouter);
 

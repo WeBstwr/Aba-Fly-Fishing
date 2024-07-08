@@ -1,6 +1,13 @@
 import Nymph0 from "../../assets/nymph0.png";
 import "./flies.css";
+import { useNavigate } from "react-router-dom";
+
 const Flies = () => {
+  const navigate = useNavigate();
+
+  function handleclick() {
+    navigate("/Purchase");
+  }
   return (
     <>
       <section className="flies">
@@ -31,7 +38,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
 
           <div className="main-fly-container">
@@ -47,7 +54,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
 
           <div className="main-fly-container">
@@ -63,7 +70,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
 
           <div className="main-fly-container">
@@ -79,7 +86,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
 
           <div className="main-fly-container">
@@ -95,7 +102,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
 
           <div className="main-fly-container">
@@ -111,7 +118,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
 
           <div className="main-fly-container">
@@ -127,7 +134,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
 
           <div className="main-fly-container">
@@ -143,7 +150,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
 
           <div className="main-fly-container">
@@ -159,7 +166,7 @@ const Flies = () => {
               </div>
               <button>add to cart</button>
             </div>
-            <button>$ 2.99</button>
+            <button onClick={(event) => handleclick()}>purchase</button>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import "./signIn.css";
 import logo from "../../assets/logo.png";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useFormik } from "formik";
@@ -10,36 +11,29 @@ const SignIn = () => {
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 
-  // const changeUserInfo = useUserStore((state) => state.changeUserInfo)
-
   const handleClick = async (formValues) => {
-    // changeUserInfo({ userName: "wabee"})
-    // navigate("/");
     try {
       setLoading(true);
       setError(false);
-      const response = await fetch(`${apiBase}/api/users/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+
+      const response = await axios.post(
+        `${apiBase}/api/users/login`,
+        formValues,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
         },
-        body: JSON.stringify(formValues),
-        credentials: "include",
-      });
-      const data = await response.json();
-      console.log(data);
-      if (data.success === true) {
-        // recordUserInfo(data.data)
-        navigate("/Profile");
+      );
+
+      if (response.data.success) {
+        navigate("/");
+      } else {
+        setError(response.data.message);
       }
-      // if (data.success === true) {
-      //   changeUserInfo(data.data);
-      // }
-      else {
-        setError(data.message);
-      }
-    } catch {
-      setError(e.message);
+    } catch (e) {
+      setError(e.response ? e.response.data.message : e.message);
     } finally {
       setLoading(false);
     }
@@ -53,7 +47,6 @@ const SignIn = () => {
     onSubmit: (values) => {
       handleClick(values);
     },
-
     validate: (formValues) => {
       let errors = {};
       if (formValues.userNameOrEmail === "") {
@@ -66,9 +59,6 @@ const SignIn = () => {
       ) {
         errors.userNameOrEmail = "Invalid User name or Email";
       }
-      if (formValues.userNameOrEmail === "") {
-        errors.email = "Email is required";
-      }
       if (formValues.password === "") {
         errors.password = "Password is required";
       }
@@ -76,6 +66,7 @@ const SignIn = () => {
       return errors;
     },
   });
+
   return (
     <>
       <div className="log-in-logo">
@@ -95,7 +86,7 @@ const SignIn = () => {
                 )}
             </div>
             <div className="log-in-form-name">
-              <label htmlFor="name">user name/email</label>
+              <label htmlFor="userNameOrEmail">user name/email</label>
               <input
                 type="text"
                 name="userNameOrEmail"
@@ -112,7 +103,7 @@ const SignIn = () => {
               )}
             </div>
             <div className="log-in-form-name">
-              <label htmlFor="name">password</label>
+              <label htmlFor="password">password</label>
               <input
                 type="password"
                 name="password"

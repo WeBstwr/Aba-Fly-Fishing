@@ -1,0 +1,78 @@
+.purchase {
+  margin-top: 10rem;
+}
+
+.purchase-fly-container {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.purchase-fly-text-box {
+  background-color: var(--third-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 40%;
+  flex-wrap: wrap;
+  box-shadow: 7px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 10px 17px 0px rgba(0, 0, 0, 0.75);
+}
+
+.purchase-fly-text-box h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: var(--first-color);
+}
+
+.purchase-fly-text-box p {
+  font-size: 1.5rem;
+  padding: 1.8rem 0;
+  text-align: center;
+  text-wrap: wrap;
+  letter-spacing: 1.5px;
+}
+
+.purchase-fly-text-box h4 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: var(--first-color);
+}
+
+.purchase-fly-text-box .add-quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.purchase-fly-text-box .add-quantity button {
+  width: 5rem;
+  color: var(--first-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.purchase-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.purchase-fly-text-box button {
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  background-color: var(--fifth-color);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
