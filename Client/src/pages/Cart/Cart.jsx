@@ -1,13 +1,22 @@
 import "./cart.css";
 import Banner from "../../components/Banner/Banner";
 import { useNavigate } from "react-router-dom";
+import useCartStore from "../../cartStore/useCartStore";
 
 const Cart = () => {
   const navigate = useNavigate();
+  const { cart, removeFromCart } = useCartStore();
 
-  function handleclick() {
+  function handleContinueShopping() {
     navigate("/Flies");
   }
+
+  function handleBuyNow(fly) {
+    navigate("/Purchase", {
+      state: { fly },
+    });
+  }
+
   return (
     <>
       <section className="cart">
@@ -15,21 +24,31 @@ const Cart = () => {
           <h2>my cart</h2>
         </div>
         <Banner mainText="my-items" />
-        <div className="cart-items">
+        {cart.length === 0 ? (
           <h3>no items yet</h3>
-          {/* <div className="cart-item">
-            <div className="cart-item-img">
-              image
-              <div className="cart-item-text">
-                <h3>product name</h3>
-                <p>product description</p>
+        ) : (
+          <div className="cart-items">
+            {cart.map((item, index) => (
+              <div className="cart-item" key={index}>
+                <div className="cart-item-img">
+                  <img src={item.image} alt="fly" />
+                  <div className="cart-item-text">
+                    <h4>{item.name}</h4>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+                <div className="cart-btns">
+                  <button onClick={() => handleBuyNow(item)}>buy now</button>
+                  <button onClick={() => removeFromCart(item.name)}>
+                    remove
+                  </button>
+                </div>
               </div>
-            </div>
-            <button>$$</button>
-          </div> */}
-        </div>
-        <div className="item-price">
-          <button onClick={(event) => handleclick()}>continue shopping</button>
+            ))}
+          </div>
+        )}
+        <div className="back-to-shopping">
+          <button onClick={handleContinueShopping}>continue shopping</button>
         </div>
       </section>
     </>

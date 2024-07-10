@@ -1,32 +1,15 @@
-// import { Link } from "react-router-dom";
-// import "./flies.css";
-
-// const Fly = ({ image, name, description, price, handleClick }) => {
-//   return (
-//     <div className="fly">
-//       <img src={image} alt={name} />
-//       <h3>{name}</h3>
-//       <p>{description}</p>
-//       <h4>{price}</h4>
-//       <div className="fly-buttons">
-//         <button className="fly-btn" onClick={handleClick}>
-//           Purchase
-//         </button>
-//         <Link to="/Cart" className="fly-btn">
-//           Add to Cart
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Fly;
-
 import React from "react";
 import { Link } from "react-router-dom";
 import "./flies.css";
+import useCartStore from "../../cartStore/useCartStore";
 
-const Fly = ({ image, name, description, price, handleClick }) => {
+const Fly = ({ image, name, description, handleClick }) => {
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  const handleAddToCart = () => {
+    addToCart({ image, name, description });
+  };
+
   return (
     <div className="fly">
       <img src={image} alt={name} />
@@ -36,9 +19,9 @@ const Fly = ({ image, name, description, price, handleClick }) => {
         <button className="fly-btn" onClick={handleClick}>
           Purchase
         </button>
-        <Link to="/Cart" className="fly-btn">
+        <button className="fly-btn" onClick={handleAddToCart}>
           Add to Cart
-        </Link>
+        </button>
       </div>
     </div>
   );
