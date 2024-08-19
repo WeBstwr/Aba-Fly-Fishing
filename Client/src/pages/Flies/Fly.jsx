@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import toast from "react-simple-toasts";
+import "react-simple-toasts/dist/theme/dark.css";
 import "./flies.css";
 import useCartStore from "../../cartStore/useCartStore";
 
@@ -8,6 +10,10 @@ const Fly = ({ image, name, description, handleClick }) => {
 
   const handleAddToCart = () => {
     addToCart({ image, name, description });
+    toast("Added to cart successfully", {
+      theme: "dark",
+      type: "success",
+    });
   };
 
   return (

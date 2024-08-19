@@ -11,7 +11,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate("/SignIn");
+    navigate("/");
   };
 
   const handleclick = async (formValues) => {
@@ -27,7 +27,7 @@ const SignUp = () => {
       });
       const data = await response.json();
       if (data.success === true) {
-        navigate("/SignIn");
+        navigate("/");
       } else {
         setError(data.message);
       }

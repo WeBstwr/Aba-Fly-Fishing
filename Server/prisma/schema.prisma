@@ -14,12 +14,25 @@ datasource db {
 }
 
 model User {
-  id String @id @default(uuid())
-  userName String
+  id        String     @id @default(uuid())
+  userName  String
   firstName String
-  lastName String
-  email String @unique
-  password String
+  lastName  String
+  email     String     @unique
+  password  String
+  cartItems CartItem[]
 
   @@map("users_table")
+}
+
+model CartItem {
+  id          String @id @default(uuid())
+  userId      String
+  name        String
+  image       String
+  description String
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("cart_items_table")
 }

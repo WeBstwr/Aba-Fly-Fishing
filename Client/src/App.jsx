@@ -1,6 +1,5 @@
 import "./assets/globals.css";
 import Header from "./components/Header/Header";
-// import Protected from "./components/Protected/Protected.jsx";
 import Home from "./pages/Home/Home";
 import Flies from "./pages/Flies/Flies";
 import Contact from "./pages/Contact/Contact.jsx";
@@ -19,14 +18,14 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/Flies" element={<Flies />} />
           <Route path="/Purchase" element={<Purchase />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/" element={<SignIn />} />
         </Routes>
         <Footer />
       </BrowserRouter>
