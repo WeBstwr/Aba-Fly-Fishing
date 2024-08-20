@@ -1,0 +1,21 @@
+import React from "react";
+import { Outlet } from "react-router-dom";
+import "./flies.css";
+
+const FliesLayout = () => {
+  return (
+    <section className="flies">
+      <div className="flies-category">
+        <h3>Category</h3>
+        <div className="flies-names">
+          <a href="/nymphs">Nymphs</a>
+        </div>
+      </div>
+      <div className="flies-content">
+        <Outlet />
+      </div>
+    </section>
+  );
+};
+
+export default FliesLayout;

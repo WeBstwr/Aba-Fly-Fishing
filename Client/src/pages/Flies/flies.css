@@ -1,7 +1,6 @@
 .flies {
   margin-top: 12rem;
   position: relative;
-  /* border: 3px solid purple; */
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +26,6 @@
   position: fixed;
   top: 12rem;
   left: 0;
-  /* border: 2px solid red; */
 }
 
 @media screen and(max-width: 53.125em) {
