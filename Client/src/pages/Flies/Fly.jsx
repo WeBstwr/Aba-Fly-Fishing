@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import toast from "react-simple-toasts";
 import "react-simple-toasts/dist/theme/dark.css";
 import "./flies.css";

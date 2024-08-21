@@ -1,17 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import FliesList from "./FliesList";
-import { FliesData } from "./FliesData";
 import "./flies.css";
 
 const Flies = () => {
   const navigate = useNavigate();
-
-  const handleClick = (fly) => {
-    navigate("/Purchase", {
-      state: { fly },
-    });
-  };
 
   return (
     <section className="flies">
@@ -21,7 +13,7 @@ const Flies = () => {
           <p onClick={() => navigate("/Flies/Nymphs")}>Nymphs</p>
         </div>
       </div>
-      <FliesList fliesData={FliesData} handleClick={handleClick} />
+      <h2>we have a wide variety of flies</h2>
     </section>
   );
 };

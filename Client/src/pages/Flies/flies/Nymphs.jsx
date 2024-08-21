@@ -14,7 +14,7 @@ const Nymphs = () => {
 
   return (
     <section className="flies">
-      <h2>Nymphs</h2>
+      <h4>Nymphs</h4>
       <FliesList fliesData={nymphsData} handleClick={handleClick} />
     </section>
   );
