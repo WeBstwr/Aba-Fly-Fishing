@@ -11,6 +11,7 @@ const Flies = () => {
         <h3>Category</h3>
         <div className="flies-names">
           <p onClick={() => navigate("/Flies/Nymphs")}>Nymphs</p>
+          <p onClick={() => navigate("/Flies/Bass")}>Bass</p>
         </div>
       </div>
       <h2>we have a wide variety of flies</h2>

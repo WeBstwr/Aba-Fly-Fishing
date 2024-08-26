@@ -11,6 +11,7 @@ import SignIn from "./pages/SignIn/SignIn.jsx";
 import SignUp from "./pages/SignUp/SignUp.jsx";
 import Purchase from "./pages/Purchase/Purchase.jsx";
 import Nymphs from "./pages/Flies/flies/Nymphs.jsx";
+import Bass from "./pages/Flies/flies/Bass.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Flies" element={<FliesLayout />}>
             <Route index element={<Flies />} />
             <Route path="Nymphs" element={<Nymphs />} />
+            <Route path="Bass" element={<Bass />} />
           </Route>
 
           <Route path="/Purchase" element={<Purchase />} />

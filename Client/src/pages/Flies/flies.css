@@ -71,6 +71,8 @@
 }
 
 .flies-names {
+  display: flex;
+  flex-direction: column;
   font-size: 2rem;
   line-height: 3rem;
   letter-spacing: 2px;

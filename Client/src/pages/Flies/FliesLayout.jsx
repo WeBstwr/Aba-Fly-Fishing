@@ -9,6 +9,7 @@ const FliesLayout = () => {
         <h3>Category</h3>
         <div className="flies-names">
           <a href="/nymphs">Nymphs</a>
+          <a href="/Bass">Bass</a>
         </div>
       </div>
       <div className="flies-content">
