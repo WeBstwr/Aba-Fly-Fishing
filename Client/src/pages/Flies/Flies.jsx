@@ -12,6 +12,7 @@ const Flies = () => {
         <div className="flies-names">
           <p onClick={() => navigate("/Flies/Nymphs")}>Nymphs</p>
           <p onClick={() => navigate("/Flies/Bass")}>Bass</p>
+          <p onClick={() => navigate("/Flies/Dry")}>Dry</p>
         </div>
       </div>
       <h2>we have a wide variety of flies</h2>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import "./flies.css";
 
 const FliesLayout = () => {
@@ -8,8 +8,9 @@ const FliesLayout = () => {
       <div className="flies-category">
         <h3>Category</h3>
         <div className="flies-names">
-          <a href="/nymphs">Nymphs</a>
-          <a href="/Bass">Bass</a>
+          <Link to="Nymphs">Nymphs</Link>
+          <Link to="Bass">Bass</Link>
+          <Link to="Dry">Dry</Link>
         </div>
       </div>
       <div className="flies-content">
